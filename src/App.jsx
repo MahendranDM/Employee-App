@@ -7,12 +7,15 @@ import AddEmployee from './components/AddEmployee'
 import SearchEmployee from './components/SearchEmployee'
 import DeleteEmployee from './components/DeleteEmployee'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import ViewEmployee from './components/ViewEmployee'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+
+    
     <BrowserRouter>
     
     <Routes>
@@ -20,6 +23,7 @@ function App() {
         <Route path='/' element={<AddEmployee/>}/>
         <Route path='/search' element={<SearchEmployee/>}/>
         <Route path='/delete' element={<DeleteEmployee/>}/>
+        <Route path='/view' element={<ViewEmployee/>}/>
 
 
     </Routes>
