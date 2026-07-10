@@ -1,49 +1,59 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <div>
+    <nav
+      className="navbar navbar-expand-lg bg-dark shadow-sm"
+      style={{ fontFamily: "Poppins, sans-serif" }}
+    >
+      <div className="container">
 
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
-  <div className="container-fluid">
-    {/* <a className="navbar-brand" href="#">Home</a>
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button> */}
-    <div className="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul className="navbar-nav">
-        <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="/">Add Employee</a>
-        </li>
+        <div className="collapse navbar-collapse justify-content-center">
+          <ul className="navbar-nav">
 
-        <li className="nav-item">
-          <a className="nav-link" href="/view">View Employee</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="/search">Search Employee</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="/delete">Delete Employee</a>
-        </li>
-        {/* <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown link
-          </a>
-          <ul className="dropdown-menu">
-            <li><a className="dropdown-item" href="#">Action</a></li>
-            <li><a className="dropdown-item" href="#">Another action</a></li>
-            <li><a className="dropdown-item" href="#">Something else here</a></li>
+            <li className="nav-item mx-3">
+              <Link
+                className="nav-link text-white fw-bold fs-5"
+                to="/"
+              >
+                Add Employee
+              </Link>
+            </li>
+
+            <li className="nav-item mx-3">
+              <Link
+                className="nav-link text-white fw-bold fs-5"
+                to="/view"
+              >
+                View Employee
+              </Link>
+            </li>
+
+            <li className="nav-item mx-3">
+              <Link
+                className="nav-link text-white fw-bold fs-5"
+                to="/search"
+              >
+                Search Employee
+              </Link>
+            </li>
+
+            <li className="nav-item mx-3">
+              <Link
+                className="nav-link text-white fw-bold fs-5"
+                to="/delete"
+              >
+                Delete Employee
+              </Link>
+            </li>
+
           </ul>
-        </li> */}
-      </ul>
-    </div>
-  </div>
-</nav>
+        </div>
 
+      </div>
+    </nav>
+  );
+};
 
-
-    </div>
-  )
-}
-
-export default NavBar
+export default NavBar;
