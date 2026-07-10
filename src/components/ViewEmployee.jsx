@@ -1,7 +1,77 @@
-import React from 'react'
+import React, { useState } from 'react'
 import NavBar from './NavBar'
 
 const ViewEmployee = () => {
+
+  const[data,changeData] = useState(
+
+
+    
+
+[
+  {
+    "empcode": "EMP001",
+    "name": "Rahul Sharma",
+    "phno": "9876543210",
+    "designation": "Software Engineer"
+  },
+  {
+    "empcode": "EMP002",
+    "name": "Anjali Nair",
+    "phno": "9876543211",
+    "designation": "HR Manager"
+  },
+  {
+    "empcode": "EMP003",
+    "name": "Arun Kumar",
+    "phno": "9876543212",
+    "designation": "Project Manager"
+  },
+  {
+    "empcode": "EMP004",
+    "name": "Sneha Joseph",
+    "phno": "9876543213",
+    "designation": "UI/UX Designer"
+  },
+  {
+    "empcode": "EMP005",
+    "name": "Vishnu Raj",
+    "phno": "9876543214",
+    "designation": "QA Engineer"
+  },
+  {
+    "empcode": "EMP006",
+    "name": "Meera Das",
+    "phno": "9876543215",
+    "designation": "Business Analyst"
+  },
+  {
+    "empcode": "EMP007",
+    "name": "Akash Menon",
+    "phno": "9876543216",
+    "designation": "DevOps Engineer"
+  },
+  {
+    "empcode": "EMP008",
+    "name": "Priya Ramesh",
+    "phno": "9876543217",
+    "designation": "Accountant"
+  },
+  {
+    "empcode": "EMP009",
+    "name": "Nikhil Paul",
+    "phno": "9876543218",
+    "designation": "System Administrator"
+  },
+  {
+    "empcode": "EMP010",
+    "name": "Divya Suresh",
+    "phno": "9876543219",
+    "designation": "Marketing Executive"
+  }
+])
+
+
   return (
     <div>
       <NavBar />
@@ -17,78 +87,17 @@ const ViewEmployee = () => {
             </tr>
           </thead>
 
-          <tbody>
-            <tr>
-              
-              <td>EMP001</td>
-              <td>Rahul Sharma</td>
-              <td>9876543210</td>
-              <td>Software Engineer</td>
-            </tr>
-
-            <tr>
-              <td>EMP002</td>
-              <td>Anjali Nair</td>
-              <td>9876543211</td>
-              <td>HR Manager</td>
-            </tr>
-
-            <tr>
-              <td>EMP003</td>
-              <td>Arun Kumar</td>
-              <td>9876543212</td>
-              <td>Project Manager</td>
-            </tr>
-
-            <tr>
-              <td>EMP004</td>
-              <td>Sneha Joseph</td>
-              <td>9876543213</td>
-              <td>UI/UX Designer</td>
-            </tr>
-
-            <tr>
-              <td>EMP005</td>
-              <td>Vishnu Raj</td>
-              <td>9876543214</td>
-              <td>QA Engineer</td>
-            </tr>
-
-            <tr>
-              <td>EMP006</td>
-              <td>Meera Das</td>
-              <td>9876543215</td>
-              <td>Business Analyst</td>
-            </tr>
-
-            <tr>
-              <td>EMP007</td>
-              <td>Akash Menon</td>
-              <td>9876543216</td>
-              <td>DevOps Engineer</td>
-            </tr>
-
-            <tr>
-              <td>EMP008</td>
-              <td>Priya Ramesh</td>
-              <td>9876543217</td>
-              <td>Accountant</td>
-            </tr>
-
-            <tr>
-              <td>EMP009</td>
-              <td>Nikhil Paul</td>
-              <td>9876543218</td>
-              <td>System Administrator</td>
-            </tr>
-
-            <tr>
-              <td>EMP010</td>
-              <td>Divya Suresh</td>
-              <td>9876543219</td>
-              <td>Marketing Executive</td>
-            </tr>
-          </tbody>
+       <tbody>
+  {data.map((value, index) => (
+    <tr >
+      <td>{value.empcode}</td>
+      <td>{value.name}</td>
+      <td>{value.phno}</td>
+      <td>{value.designation}</td>
+    </tr>
+  ))}
+</tbody>
+       
         </table>
       </div>
     </div>
